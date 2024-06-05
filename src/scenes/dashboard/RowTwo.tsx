@@ -233,7 +233,8 @@ const RowTwo = () => {
 						<Scatter
 							name="Product Expense Ratio"
 							data={productExpenseData}
-							fill={palette.tertiary[500]}
+							// fill={palette.tertiary[500]}
+							fill="#fdffbf"
 						/>
 					</ScatterChart>
 				</ResponsiveContainer>

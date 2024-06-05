@@ -18,26 +18,27 @@ const Row3 = () => {
 	const { data: kpiData } = useGetKpisQuery();
 	const { data: productData } = useGetProductsQuery();
 	const { data: transactionData } = useGetTransactionsQuery();
+	// console.log("kpiData[0].expensesByCategory : \n", kpiData[0]);
 
-	// const pieChartData = useMemo(() => {
-	// 	if (kpiData) {
-	// 		const totalExpenses = kpiData[0].totalExpenses;
-	// 		return Object.entries(kpiData[0].expensesByCategory).map(
-	// 			([key, value]) => {
-	// 				return [
-	// 					{
-	// 						name: key,
-	// 						value: value,
-	// 					},
-	// 					{
-	// 						name: `${key} of Total`,
-	// 						value: totalExpenses - value,
-	// 					},
-	// 				];
-	// 			}
-	// 		);
-	// 	}
-	// }, [kpiData]);
+	const pieChartData = useMemo(() => {
+		if (kpiData) {
+			const totalExpenses = kpiData[0].totalExpenses;
+			return Object.entries(kpiData[0].expensesByCategory).map(
+				([key, value]) => {
+					return [
+						{
+							name: key,
+							value: value,
+						},
+						{
+							name: `${key} of Total`,
+							value: totalExpenses - value,
+						},
+					];
+				}
+			);
+		}
+	}, [kpiData]);
 
 	const productColumns = [
 		{
@@ -87,7 +88,6 @@ const Row3 = () => {
 
 	return (
 		<>
-
 			<DashboardBox gridArea="g">
 				<BoxHeader
 					title="List of Products"
@@ -122,7 +122,7 @@ const Row3 = () => {
 					/>
 				</Box>
 			</DashboardBox>
-			
+
 			<DashboardBox gridArea="h">
 				<BoxHeader
 					title="Recent Orders"
@@ -158,7 +158,7 @@ const Row3 = () => {
 				</Box>
 			</DashboardBox>
 
-			{/* 			
+									
 			<DashboardBox gridArea="i">
 				<BoxHeader
 					title="Expense Breakdown By Category"
@@ -194,7 +194,7 @@ const Row3 = () => {
 					))}
 				</FlexBetween>
 			</DashboardBox>
-			 */}
+			
 
 			<DashboardBox gridArea="j">
 				<BoxHeader
