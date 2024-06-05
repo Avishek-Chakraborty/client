@@ -18,9 +18,8 @@ import {
 
 import regression, {DataPoint} from 'regression';
 
-type Props = unknown;
 
-const Predictions = (props: Props) => {
+const Predictions = () => {
 	const { palette } = useTheme();
 	const [isPredictions, setIsPredictions] = useState(false);
 	const { data: kpiData } = useGetKpisQuery();
