@@ -8,7 +8,7 @@ import {
 } from "@/state/api";
 import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid, GridCellParams } from "@mui/x-data-grid";
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import { Cell, Pie, PieChart } from "recharts";
 
 const Row3 = () => {
@@ -158,7 +158,6 @@ const Row3 = () => {
 				</Box>
 			</DashboardBox>
 
-									
 			<DashboardBox gridArea="i">
 				<BoxHeader
 					title="Expense Breakdown By Category"
@@ -194,7 +193,6 @@ const Row3 = () => {
 					))}
 				</FlexBetween>
 			</DashboardBox>
-			
 
 			<DashboardBox gridArea="j">
 				<BoxHeader
@@ -215,11 +213,11 @@ const Row3 = () => {
 					></Box>
 				</Box>
 				<Typography margin="0 1rem" variant="h6">
-					Orci aliquam enim vel diam. Venenatis euismod id donec mus
-					lorem etiam ullamcorper odio sed. Ipsum non sed gravida
-					etiam urna egestas molestie volutpat et. Malesuada quis
-					pretium aliquet lacinia ornare sed. In volutpat nullam at
-					est id cum pulvinar nunc.
+					Our Financial Dashboard is a dynamic tool for financial
+					analysis. It visually represents our operations, aids
+					strategic planning with key metrics, and promotes informed
+					decision-making for improved efficiency and financial
+					health.
 				</Typography>
 			</DashboardBox>
 		</>

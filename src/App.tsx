@@ -3,6 +3,7 @@ import { useMemo } from "react";
 import { themeSettings } from "./theme";
 import { Box, CssBaseline } from "@mui/material";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Predictions from "./scenes/predictions";
 
 import Navbar from "@/scenes/navbar";
 import Dashboard from "@/scenes/dashboard";
@@ -25,7 +26,7 @@ function App() {
 							<Route path="/" element={<Dashboard />} />
 							<Route
 								path="/predictions"
-								element={<div>predictions page</div>}
+								element={<Predictions/>}
 							/>
 						</Routes>
 					</Box>
