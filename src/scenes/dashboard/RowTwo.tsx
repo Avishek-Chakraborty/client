@@ -158,7 +158,7 @@ const RowTwo = () => {
 							outerRadius={40}
 							paddingAngle={5}
 						>
-							{pieData.map((entry, index) => (
+							{pieData.map((_, index) => (
 								<Cell
 									key={`cell-${index}`}
 									fill={pieColors[index]}
